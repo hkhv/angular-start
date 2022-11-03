@@ -7,7 +7,8 @@
     "build": "ng build",
     "lint": "ng lint",
     "http": "http-server dist",
-    "pre-commit": "lint-staged --no-stash"
+    "pre-commit": "lint-staged --no-stash",
+    "build:elements": "ng build --output-hashing none && node concat-build.js && node elements-build.js"
   },
   "private": true,
   "dependencies": {
@@ -15,12 +16,15 @@
     "@angular/common": "^14.2.0",
     "@angular/compiler": "^14.2.0",
     "@angular/core": "^14.2.0",
+    "@angular/elements": "^14.2.5",
     "@angular/forms": "^14.2.0",
     "@angular/platform-browser": "^14.2.0",
     "@angular/platform-browser-dynamic": "^14.2.0",
     "@angular/router": "^14.2.0",
+    "concat": "^1.0.3",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
+    "fs-extra": "^10.1.0",
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
     "ngx-build-plus": "^14.0.0",
