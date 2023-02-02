@@ -1,1 +1,12 @@
 <h1>Hello World</h1>
+
+<ul>
+  <li *ngFor="let profile of profileData">
+    <img class="avatar" [src]="profile.avatarUrl" />
+    <p class="name">{{ profile.name }}</p>
+    <p class="bio">{{ profile.bio }}</p>
+    <p className="total-followers">
+      {{ profile.stats.totalFollowers }} followers
+    </p>
+  </li>
+</ul>
